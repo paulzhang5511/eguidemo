@@ -1,0 +1,22 @@
+[package]
+name = "eguidemo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.28.1", features = [
+    "wgpu",
+    "__screenshot", # __screenshot is so we can dump a screenshot using EFRAME_SCREENSHOT_TO
+] }
+wgpu = { version = "0.20.0" }
+
+# For image support:
+egui_extras = { version = "0.28.1", features = ["default", "image"] }
+env_logger = { version = "0.10", default-features = false, features = [
+    "auto-color",
+    "humantime",
+] }
+log = "0.4"
+image = "0.24"
+chrono = "0.4"
+anyhow = "1.0.80"
